@@ -1,0 +1,36 @@
+.layout {
+    margin: 20px;
+}
+
+.cardWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.header {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.button {
+    cursor: pointer;
+    padding: 4px 20px;
+    background: transparent;
+    border: 1px solid #757575;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+.button:hover {
+    background-color: #ccc9c9;
+}
+
+@media only screen and (max-width: 768px) {
+    .layout {
+        margin: 10px;
+    }
+    .cardWrap {
+        justify-content: center;
+    }
+  }
