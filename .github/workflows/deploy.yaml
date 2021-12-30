@@ -11,16 +11,21 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
+        working-directory: ./app
       - name: Setup enviroment
         uses: actions/setup-node@v2
+        working-directory: ./app
         with:
           node-version: '17'
       - name: Install dependencies
         run: yarn install
+        working-directory: ./app
       - name: Build app
         run: yarn run build
+        working-directory: ./app
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.7
+        working-directory: ./app
         with:
           branch: gh-pages
           folder: build
